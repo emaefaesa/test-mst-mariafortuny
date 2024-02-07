@@ -3,40 +3,106 @@
 
 <head>
   <meta charset="UTF-8">
-  
-<script src="https://customer.ealicia.com/js/jquery.js" type="text/javascript"></script>
-<link rel='stylesheet' href='https://customer.ealicia.com:443/demo/css/bootstrap.min.css' type='text/css' media='screen'/> 
-<script src='https://customer.ealicia.com/js/bootstrap.min.js' type="text/javascript"></script>   
- 
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://customer.ealicia.com/js/jquery.js" type="text/javascript"></script>
+  <link rel='stylesheet' href='https://customer.ealicia.com:443/demo/css/bootstrap.min.css' type='text/css'
+    media='screen' />
+  <script src='https://customer.ealicia.com/js/bootstrap.min.js' type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src='https://customer.ealicia.com/js/bootstrap.min.js' type="text/javascript"></script>
   <title>Prueba maquetación y diseño</title>
 </head>
-<style>
- 
-</style>
 
 <body>
 
+  <div class="container text-center mt-5">
+    <!-- img -->
+    <header>
+      <div class="row">
+        <div class="col">
+          <div id="imagen1">
+            <img src="https://customer.ealicia.com/desarrollo/images/boceto.png" alt="boceto de la imagen" class="img-fluid" width="400" height="">
+          </div>
+          <div id="imagen2" style="display: none;">
+            <img src="https://www.ub.edu/grevia/imagenes/LOGOS/eAlicia2019_logo.svg" alt="Imagen" class="img-fluid" width="300">
+          </div>
+        </div>
+      </div>
   
-
-  <div id="imagen1"><img src="https://customer.ealicia.com/desarrollo/images/boceto.png" alt="bodeto de la imagen"><img></div>
-  <div id="imagen2"></div>
-  <div id="controles"> </div>
-  
-  <div id="divtexto">
-    <span id="lbltextoAnt" style="color:#666">Debes colocar una imagen centrada en medio de la pantalla id imagen. <br> Seguida de esta, debajo,  dos botones uno a cada lado Izq y Derecha <br> con JS al pulsar un botón se debe esconder este texto y/o mostrarlo.  <br> Al pulsar el otro boton  debe cambiar la imagen. mostrando una u otra </span>
-    <br>
-    <span id="lbltexto" style="color:#000"> Puedes utilizar el boceto como una de las imagenes, para la principal usa cualquier imagen de intenet</span>
-    <br>
+    </header>
     
-    <span id="lbltextoSig" style="color:#aaa">Todo el texto debe quedar justificado y con las separaciones oportunas para que sea legible.</span>
+    <!-- button -->
+    <div id="controles">
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <button type="button" id="button1" class="btn btn-primary btn-block">Ver texto</button>
+        </div>
+        <div class="col-md-6">
+          <button type="button" id="button2" class="btn btn-secondary btn-block">Ver otra imagen</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- text -->
+    <div id="divtexto">
+      <div class="row mt-4">
+        <div class="col">
+          <div class="container text-center">
+            <span id="texto">Debes colocar una imagen centrada en medio de la pantalla id imagen. <br> Seguida de esta, debajo, dos botones uno a cada lado Izq y Derecha <br> con JS al pulsar un botón se debe esconder este texto y/o mostrarlo. <br> Al pulsar el otro boton debe cambiar la imagen mostrando una u otra. </span>
+            <br>
+            <span id="lbltexto" style="color:#aaa"> Puedes utilizar el boceto como una de las imagenes, para la principal usa cualquier imagen de intenet</span>
+            <br>
+            <span id="lbltextoSig" style="color:#aaa">Todo el texto debe quedar justificado y con las separaciones oportunas para que sea legible.</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <!-- Columna izquierda -->
+    <div class="col-md-4 mb-0 text-muted">
+      <strong>2ª fase entrevista</strong> | eALICIA
+    </div>
   
+    <!-- Columna central -->
+    <a href="https://www.ealicia.com/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="img/imagotipo-ealicia.png" width="50" alt="Imagotipo de eALICIA">
+    </a>
+  
+    <!-- Columna derecha -->
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item">
+        <a href="https://www.behance.net/maria_fortuny" class="nav-link px-2 text-muted">Maria Fortuny</a>
+      </li>
+    </ul>
+  </footer>
+  
+
   <script>
-   
+    document.addEventListener("DOMContentLoaded", function() {
+        let btnTexto = document.getElementById("button1");
+        let btnImagen = document.getElementById("button2");
+        let texto = document.getElementById("texto");
+        let imagen1 = document.getElementById("imagen1");
+        let imagen2 = document.getElementById("imagen2");
 
+        btnTexto.addEventListener("click", function() {
+            texto.style.display = texto.style.display === "" ? "none" : "";
+        });
+
+        btnImagen.addEventListener("click", function() {
+            imagen1.style.display = imagen1.style.display === "" ? "none" : "";
+            imagen2.style.display = imagen2.style.display === "" ? "none" : "";
+        });
+    });
   </script>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 
