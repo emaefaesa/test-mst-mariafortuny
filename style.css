@@ -1,35 +1,98 @@
 /* * {
  border: 1px solid 
-}
-  */
-
-/* 
-.oculto {
-    display: none;
 } */
-
+ 
 img {
   border-radius: 10px;
 }
 
 body {
+  margin: 0 auto;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   background-color: #ffffff;
   color: #333;
   font-size: 1rem;
   line-height: 1.5;
   display: block;
+  background-image: url("img/imagotipo-ealicia-grey.png");
+  background-repeat: no-repeat; 
+  background-position: -600px;
+  width: 100%; 
+  height: 100vh; s
 }
+
+.line-decoration {
+  background-color: #01AEAD;
+  height: 6px;
+}
+
+/* img */
 
 .container {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+
 }
 
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+#imagen1, #imagen2 {
+  margin-bottom: 20px;
+}
+
+/* button */
+
+#controles {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
+
+#controles .btn {
+  padding: 10px 60px; 
+  white-space: nowrap;
+
+}
+
+.btn {
+  border-radius: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #01AEAD;
+/*   border-radius: 0px 20px; */
+  border: none;
+  color: #fff;
+  margin-bottom: 10px;
+  --bs-btn-active-bg: #01AEAD;
+}
+
+.btn-secondary {
+  background-color: #ffffff00;
+  border: 2px solid #01AEAD;
+  color: #01AEAD;
+  --bs-btn-active-bg: #01AEAD;
+  --bs-btn-hover-border-color: #01aeae00;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #037c7c;
+}
+
+
+/* text */
+
+#divtexto span {
+  display: block;
+  margin-bottom: 10px;
 }
 
 #texto {
@@ -38,64 +101,10 @@ body {
 }
 
 
-#controles {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+/* footer */
 
-.btn {
-  padding: 10px 60px;
-  font-size: 16px;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-}
-
-.btn-primary {
-  background-color: #01AEAD;
-  border: none;
-  color: #fff;
-  margin-bottom: 10px;
-  
-}
-
-.btn-secondary {
-  background-color: #ffffff00;
-  border: 2px solid #01AEAD;
-  color: #01AEAD;
-}
-
-.btn-primary:hover, .btn-secondary:hover {
-  background-color: #037c7c;
-}
-
-
-
-
-#divtexto span {
-  display: block;
-  margin-bottom: 10px;
-}
-
-#imagen1, #imagen2 {
-  margin-bottom: 20px;
-}
-
-.oculto {
-  display: none;
-}
-
-footer {
-/*   border: 1px solid;
- */  
-
-}
-
-
-@media (max-width: 500px) {
-  .col-md-4.mb-0.text-muted  {
+/* @media (max-width: 500px) {
+  .col-md-4.mb-3.mb-md-0.text-md-start.text-center  {
     display: none;
   }
 }
@@ -103,6 +112,25 @@ footer {
 @media (max-width: 500px) {
   .nav.col-md-4.justify-content-end  {
     display: none;
+  }
+} */
+
+a {
+  color: #adadad; /* Cambia el color a tu preferencia */
+}
+
+.container-fluid.border-top.py-3 {
+  color: #01AEAD;
+}
+
+.col-md-4.mb-0.text-muted{
+  padding-left: 20px;
+}
+
+
+@media (max-width: 500px) {
+  .col-md-4.d-flex.align-items-center.justify-content-center.me-md-auto {
+align-items: center;
   }
 }
 
@@ -118,4 +146,6 @@ footer {
   transform: scale(1.05); 
   transition: transform 0.5s ease;
 }
+
+
 
